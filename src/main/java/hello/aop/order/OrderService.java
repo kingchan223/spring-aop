@@ -11,8 +11,8 @@ public class OrderService {
     public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
-    public void orderItem(String itemId) {
+    public String orderItem(String itemId) {
         log.info("[orderService] 실행");
-        orderRepository.save(itemId);
+        return orderRepository.save(itemId);
     }
 }
