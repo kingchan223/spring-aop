@@ -12,10 +12,12 @@ public class MemberServiceImpl implements MemberService{
     @Override
     @MethodAop("test value")
     public String hello(String param) {
+        System.out.println("MemberServiceImpl.hello");
         return "ok";
     }
 
     public String internal(String param){
+        System.out.println("MemberServiceImpl.internal");
         return "ok";
     }
 }
